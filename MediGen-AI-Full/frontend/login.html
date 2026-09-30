@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in — MediGen AI — Smart Health Diagnosis Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css" />
+<link rel="stylesheet" href="/static/extras.css" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-wrap">
+    <div class="auth-visual">
+      <div class="brand brand-light">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+          <path d="M2 13H7L10 4L16 22L19 13H24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>MediGen AI</span>
+      </div>
+      <h1>Understand your<br>symptoms in minutes,<br>not waiting rooms.</h1>
+      <svg viewBox="0 0 420 200" class="pulse-svg auth-pulse">
+        <polyline class="pulse-line" points="0,100 60,100 80,60 100,140 120,20 140,160 160,100 210,100 230,80 250,120 270,100 420,100" />
+      </svg>
+      <p class="auth-visual-note">AI-assisted preliminary diagnosis, with voice input and plain-language explanations.</p>
+    </div>
+
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Sign in</button>
+        <button class="auth-tab" data-tab="signup">Create account</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>Email address</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" required />
+        <label>Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required />
+        <div id="loginError" class="form-error"></div>
+        <button type="submit" class="cta cta-solid full-width">Sign in</button>
+      </form>
+
+      <form id="signupForm" class="auth-form" style="display:none;">
+        <label>Email address</label>
+        <input type="email" id="signupEmail" placeholder="you@example.com" required />
+        <label>Choose a password</label>
+        <input type="password" id="signupPassword" placeholder="At least 6 characters" required />
+        <label>Account type</label>
+        <div class="role-toggle">
+          <label class="role-option">
+            <input type="radio" name="signupRole" value="user" checked />
+            <span>User</span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="signupRole" value="admin" />
+            <span>Admin</span>
+          </label>
+        </div>
+        <div id="signupError" class="form-error"></div>
+        <div id="signupSuccess" class="form-success"></div>
+        <button type="submit" class="cta cta-solid full-width">Create account</button>
+      </form>
+
+      <p class="demo-box">🔑 Demo Admin → <b>admin@medigen.com</b> / <b>Admin@123</b></p>
+      <p class="auth-footnote">Sign in with your Email address. User accounts see their own diagnosis history; Admin accounts can see every user's checks.</p>
+    </div>
+  </div>
+
+  <script src="/static/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+MediGen AI - Login Details
+ADMIN  -> Email: admin@medigen.com   Password: Admin@123
+USER   -> Create Account page se register karo (koi bhi email, password min 6 characters)
+Run    -> Windows: run.bat double-click | Mac/Linux: ./run.sh  (browser khud khul jayega)
+Manual -> http://127.0.0.1:8000
